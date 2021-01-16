@@ -32,7 +32,7 @@ _environ = {
 
 
 build_command = "python -m rezutil build {root}"
-private_build_requires = ["rezutil-1"]
+private_build_requires = ["python-2.7+<4", "rezutil-1"]
 
 late = locals()["late"]
 

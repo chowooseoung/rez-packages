@@ -10,9 +10,9 @@ author = "chowooseoung"
 
 _environ = {
     "any": {
-        "PROJECTS_PATH": "D:/projects", 
-        "INHOUSE_PATH": "D:/inhouse",
-        "INHOUSE_MAYA_PATH": "D:/inhouse/DCC/maya",
+        "PROJECTS_PATH": "D:/pipeline/projects", 
+        "INHOUSE_PATH": "D:/pipeline/inhouse",
+        "INHOUSE_MAYA_PATH": "D:/pipeline/inhouse/DCC/maya",
 
         "INHOUSE_MONGO": "localhost:27017",
     },
@@ -32,36 +32,36 @@ environ_ = {
 
     "maya": {
         "MAYA_MODULE_PATH": [
-            r"D:\inhouse\DCC\maya\ext\modules\animation",
-            r"D:\inhouse\DCC\maya\ext\modules\common",
-            r"D:\inhouse\DCC\maya\ext\modules\modeling",
-            r"D:\inhouse\DCC\maya\ext\modules\rigging",
-            r"D:\inhouse\DCC\maya\int\modules\animation",
-            r"D:\inhouse\DCC\maya\int\modules\common",
-            r"D:\inhouse\DCC\maya\int\modules\modeling",
-            r"D:\inhouse\DCC\maya\int\modules\rigging",
+            r"D:\pipeline\inhouse\DCC\maya\ext\modules\animation",
+            r"D:\pipeline\inhouse\DCC\maya\ext\modules\common",
+            r"D:\pipeline\inhouse\DCC\maya\ext\modules\modeling",
+            r"D:\pipeline\inhouse\DCC\maya\ext\modules\rigging",
+            r"D:\pipeline\inhouse\DCC\maya\int\modules\animation",
+            r"D:\pipeline\inhouse\DCC\maya\int\modules\common",
+            r"D:\pipeline\inhouse\DCC\maya\int\modules\modeling",
+            r"D:\pipeline\inhouse\DCC\maya\int\modules\rigging",
         ],
 
         "MAYA_SCRIPT_PATH": [
-            r"D:\inhouse\DCC\maya\ext\scripts",
-            r"D:\inhouse\DCC\maya\int\scripts",
+            r"D:\pipeline\inhouse\DCC\maya\ext\scripts",
+            r"D:\pipeline\inhouse\DCC\maya\int\scripts",
         ],
 
         "MAYA_PLUG_IN_PATH": [
-            r"D:\inhouse\DCC\maya\ext\plug-ins\animation",
-            r"D:\inhouse\DCC\maya\ext\plug-ins\common",
-            r"D:\inhouse\DCC\maya\ext\plug-ins\modeling",
-            r"D:\inhouse\DCC\maya\ext\plug-ins\rigging",
-            r"D:\inhouse\DCC\maya\int\plug-ins\animation",
-            r"D:\inhouse\DCC\maya\int\plug-ins\common",
-            r"D:\inhouse\DCC\maya\int\plug-ins\modeling",
-            r"D:\inhouse\DCC\maya\int\plug-ins\rigging",
+            r"D:\pipeline\inhouse\DCC\maya\ext\plug-ins\animation",
+            r"D:\pipeline\inhouse\DCC\maya\ext\plug-ins\common",
+            r"D:\pipeline\inhouse\DCC\maya\ext\plug-ins\modeling",
+            r"D:\pipeline\inhouse\DCC\maya\ext\plug-ins\rigging",
+            r"D:\pipeline\inhouse\DCC\maya\int\plug-ins\animation",
+            r"D:\pipeline\inhouse\DCC\maya\int\plug-ins\common",
+            r"D:\pipeline\inhouse\DCC\maya\int\plug-ins\modeling",
+            r"D:\pipeline\inhouse\DCC\maya\int\plug-ins\rigging",
         ],
     }
 }
 
 build_command = "python -m rezutil build {root}"
-private_build_requires = ["rezutil-1"]
+private_build_requires = ["python-2.7+<4", "rezutil-1"]
 
 
 def commands():

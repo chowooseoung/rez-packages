@@ -58,7 +58,7 @@ _environ = {
 
 ## The command used to bundle payload with package.py
 build_command = "python -m rezutil build {root}"
-private_build_requires = ["rezutil-1"]
+private_build_requires = ["python-2.7+<4", "rezutil-1"]
 
 ## Below are boilerplate functionality to enable the above, do not touch
 late = locals()["late"]

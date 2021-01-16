@@ -2,12 +2,9 @@
 
 name = "create_proj"
 version = "1.0.1"
-requires = [
-    "python",
-]
 
-private_build_requires = ["rezutil-1"]
 build_command = "python -m rezutil build {root}"
+private_build_requires = ["python-2.7+<4", "rezutil-1"]
 
 category = "int"
 
