@@ -4,7 +4,7 @@ late = globals()["late"]
 
 name = "avalon"
 version = "5.7.15"
-description = "avalon core download"
+description = "avalon env"
 
 requires = [
     # Dependencies
@@ -15,7 +15,7 @@ requires = [
 ]
 
 build_command = "python {root}/rezbuild.py {install}"
-private_build_requires = ["rezutil-1"]
+private_build_requires = ["python-2.7+<4", "rezutil-1"]
 
 _data = {
     "label": "Avalon",

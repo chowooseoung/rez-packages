@@ -92,7 +92,7 @@ def commands():
                 if os.path.exists(path):
                     [ paths.append(os.path.join(path, x)) for x in os.listdir(path) if os.path.isdir(os.path.join(path, x)) ]
             result.append((k, paths))
-            
+    
     for key, value in result:
         if isinstance(value, (tuple, list)):
             [ env[key].append(expandvars(v)) for v in value ]
