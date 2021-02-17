@@ -7,7 +7,7 @@ version = "3.6.0"
 description = "mgear download"
 
 build_command = "python {root}/rezbuild.py {install}"
-private_build_requires = ["rezutil-1"]
+private_build_requires = ["rezutil-1", "python"]
 
 
 def commands():

@@ -129,7 +129,7 @@ def open_archive(file_path, dont_extract=None):
                 for m in members:
                     m.name = m.name.decode("utf-8")
 
-            root_dir = [m.name for m in members][0].split('/')[0]
+            # root_dir = [m.name for m in members][0].split('/')[0]
 
         elif zipfile.is_zipfile(file_path):
             archive = _ZipFile(file_path)
@@ -141,14 +141,15 @@ def open_archive(file_path, dont_extract=None):
                                        for p in dont_extract)))
                 members = list(members)
 
-            root_dir = members[0].split('/')[0]
+            # root_dir = members[0].split('/')[0]
 
         else:
             raise RuntimeError("unrecognized archive file type")
 
         with archive:
+            result_dir = os.path.dirname(file_path)
             tmp_extracted_path = os.path.abspath("extract_dir")
-            extracted_path = os.path.abspath(root_dir)
+            extracted_path = os.path.abspath(result_dir)
             extracted_flag = os.path.join(tmp_extracted_path, "EXTRACTED")
 
             if (os.path.isdir(extracted_path)
@@ -174,8 +175,9 @@ def open_archive(file_path, dont_extract=None):
 
             archive.extractall(tmp_extracted_path, members=members)
 
-            shutil.move(os.path.join(tmp_extracted_path, root_dir),
-                        extracted_path)
+            for i in os.listdir(tmp_extracted_path):
+                shutil.move(os.path.join(tmp_extracted_path, i),
+                            os.path.join(extracted_path, i))
             clean(tmp_extracted_path)
             # put extracted flag
             open(extracted_flag, "w").close()
