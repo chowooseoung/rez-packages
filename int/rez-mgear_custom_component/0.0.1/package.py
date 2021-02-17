@@ -16,4 +16,4 @@ requires = [
 
 def commands():
     env = globals()["env"]
-    env.MGEAR_CUSTOM_COMPONENT_PATH.append("{root}/payload/component")
+    env.MGEAR_SHIFTER_COMPONENT_PATH.append("{root}/payload/component")
