@@ -3,7 +3,7 @@
 import os
 import sys
 
-url_prefix = "https://github.com/chowooseoung/mgear_custom_component/archive/{0}".format(os.environ["REZ_BUILD_PROJECT_VERSION"])
+url_prefix = "https://github.com/mgear-dev/mgear_dist/releases/download/{0}".format(os.environ["REZ_BUILD_PROJECT_VERSION"])
 
 
 def build(source_path, build_path, install_path, targets=None):
@@ -33,8 +33,7 @@ def build(source_path, build_path, install_path, targets=None):
     # Deploy
     # (we cannot use setup.py to install avalon, there are additional files
     # currently not being installed by it)
-    
-    lib.copy_dir(os.path.join(source_root, os.listdir(source_root)[0]), dst)
+    lib.copy_dir(source_root, dst)
 
 
 if __name__ == "__main__":

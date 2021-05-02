@@ -2,26 +2,17 @@
 
 late = globals()["late"]
 
-name = "mgear_custom_component"
-version = "0.0.1"
-description = "mgear custom component download"
+name = "mgear"
+version = "3.7.8"
+description = "mgear download"
 
 build_command = "python {root}/rezbuild.py {install}"
 private_build_requires = ["rezutil-1", "python"]
 
-requires = [
-    # Dependencies
-    "mgear",
-]
-
 _environ = {
-    "MGEAR_SHIFTER_COMPONENT_PATH": [
-        "{root}/payload/component"
+    "MAYA_MODULE_PATH": [
+        "{root}/payload/release"
     ],
-    # "MGEAR_SHIFTER_CUSTOMSTEP_PATH": {
-    #     "{root}/python/mGear/build/custom_steps"
-    # },
-    # "MGEAR_SYNOPTIC_PATH": "{root}/python/mGear/env/synoptic",
 }
 
 def commands():
