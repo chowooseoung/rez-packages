@@ -36,10 +36,11 @@ environ_ = {
             r"D:\pipeline\inhouse\DCC\maya\ext\modules\common",
             r"D:\pipeline\inhouse\DCC\maya\ext\modules\modeling",
             r"D:\pipeline\inhouse\DCC\maya\ext\modules\rigging",
+            r"D:\pipeline\inhouse\DCC\maya\ext\modules\CFX",
             r"D:\pipeline\inhouse\DCC\maya\int\modules\animation",
             r"D:\pipeline\inhouse\DCC\maya\int\modules\common",
             r"D:\pipeline\inhouse\DCC\maya\int\modules\modeling",
-            r"D:\pipeline\inhouse\DCC\maya\int\modules\rigging",
+            r"D:\pipeline\inhouse\DCC\maya\int\modules\CFX",
         ],
 
         "MAYA_SCRIPT_PATH": [
@@ -52,10 +53,12 @@ environ_ = {
             r"D:\pipeline\inhouse\DCC\maya\ext\plug-ins\common",
             r"D:\pipeline\inhouse\DCC\maya\ext\plug-ins\modeling",
             r"D:\pipeline\inhouse\DCC\maya\ext\plug-ins\rigging",
+            r"D:\pipeline\inhouse\DCC\maya\ext\plug-ins\CFX",
             r"D:\pipeline\inhouse\DCC\maya\int\plug-ins\animation",
             r"D:\pipeline\inhouse\DCC\maya\int\plug-ins\common",
             r"D:\pipeline\inhouse\DCC\maya\int\plug-ins\modeling",
             r"D:\pipeline\inhouse\DCC\maya\int\plug-ins\rigging",
+            r"D:\pipeline\inhouse\DCC\maya\int\plug-ins\CFX",
         ],
     }
 }
